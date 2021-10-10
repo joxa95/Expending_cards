@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,300&display=swap');
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	overflow: hidden;
+	margin: 0;
+	background-color: rgba(10, 2, 2, 0.945);
+}
+.container {
+	width: 90vw;
+	display: flex;
+}
+.panels {
+	position: relative;
+	margin: 15px;
+	flex: 0.5;
+	height: 80vh;
+	border-radius: 50px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+	transition: 0.5s ease-in;
+	box-shadow: 0 0px 14px rgb(0, 17, 168);
+}
+.panels h2 {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	color: white;
+	opacity: 0;
+}
+.panels.active {
+	box-shadow: 0 2px 14px rgb(1, 196, 255);
+	flex: 5;
+	transform: scale(1.02) rotate(360deg);
+	animation-name: rotate;
+
+	transition: ease-out 0.5s;
+}
+
+.panels.active h2 {
+	opacity: 1;
+	transition: opacity 0.2s ease-in 0.4s;
+}
+
+@media (max-width: 550px) {
+	.container {
+		width: 100vh;
+	}
+	.panels:nth-of-type(4),
+	.panels:nth-of-type(5) {
+		display: none;
+	}
+}
