@@ -27,7 +27,7 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 	cursor: pointer;
-	transition: 0.5s ease-in;
+	transition: 0.5s ease-out;
 	box-shadow: 0 0px 14px rgb(0, 17, 168);
 }
 .panels h2 {
